@@ -1,0 +1,3 @@
+[submodule "cmake"]
+	path = cmake
+	url = gitolite@106.53.67.18:third_cmake
