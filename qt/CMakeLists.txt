@@ -8,4 +8,8 @@ qt5_add_resources(UI_QRC ui.rcc)
 
 add_executable(${QT_TARGET_NAME} ${Qt_SRCS} ${UI_QRC})
 
-target_link_libraries(${QT_TARGET_NAME} Qt5::Gui Qt5::Qml)
+if (UNIX AND NOT Android)
+    set(PLATFORM_DEPS pthread)
+endif ()
+
+target_link_libraries(${QT_TARGET_NAME} Qt5::Gui Qt5::Qml ${PLATFORM_DEPS})
