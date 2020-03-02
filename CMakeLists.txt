@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.16)
+cmake_minimum_required(VERSION 3.14)
 project(Test)
 
 set(CMAKE_CXX_STANDARD 17)
@@ -18,6 +18,8 @@ include(cmake/external/ffmpeg.cmake)
 include(cmake/external/jpeg.cmake)
 include(cmake/external/libyuv.cmake)
 
+
+add_subdirectory(cpp)
 
 add_subdirectory(qt)
 
